@@ -2043,6 +2043,10 @@ section,
   background: linear-gradient(45deg, #007bff, #0056b3) !important;
   color: #ffffff !important;
   font-size: 15px !important;
+  background-image: linear-gradient(45deg, #007bff, #0056b3) !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-clip: border-box !important;
 }
 
 .navmenu .btn-calculator span {
@@ -2054,12 +2058,18 @@ section,
   background-clip: initial !important;
 }
 
+.navmenu li:hover > .btn-calculator,
 .navmenu .btn-calculator:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6) !important;
   border-color: #ffd700 !important;
   background: linear-gradient(45deg, #0056b3, #004085) !important;
+  background-image: linear-gradient(45deg, #0056b3, #004085) !important;
   color: #ffffff !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-clip: border-box !important;
+  font-weight: 700 !important;
 }
 
 .navmenu .btn-calculator:hover span {
@@ -2131,12 +2141,14 @@ section,
 .service-card .icon-wrapper {
   width: 60px;
   height: 60px;
-  background: #007bff;
+  background: linear-gradient(45deg, #007bff, #0056b3);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  border: 2px solid #ffffff;
 }
 
 .service-card .icon-wrapper i {
@@ -2181,7 +2193,7 @@ section,
 }
 
 .service-card.explore-more .icon-wrapper {
-  background: #007bff;
+  background: linear-gradient(45deg, #007bff, #0056b3);
 }
 
 .service-card.explore-more h4 {
