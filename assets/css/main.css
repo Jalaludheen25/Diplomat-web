@@ -19,29 +19,30 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #fdfbf7; /* Off-white/golden white background color for the entire website */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #106eea; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --accent-color: #007bff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-gradient: linear-gradient(45deg, #007bff, #0056b3); /* Blue gradient for buttons and accents */
+  --surface-color: #fffef9; /* Off-white surface color for boxed elements within sections */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #222222;  /* The default color of the main navmenu links */
-  --nav-hover-color: #106eea; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #222222; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #106eea; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;  /* White color for nav links on navy gradient background */
+  --nav-hover-color: #ffd700; /* Gold color for hover state */
+  --nav-mobile-background-color: linear-gradient(135deg, #001f3f 0%, #003d7a 50%, #005bb5 100%); /* Navy gradient for mobile navigation menu */
+  --nav-dropdown-background-color: rgba(0, 31, 63, 0.98); /* Dark navy for dropdown items */
+  --nav-dropdown-color: #ffffff; /* White text for dropdown items */
+  --nav-dropdown-hover-color: #ffd700; /* Gold color for dropdown hover */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f5f9ff;
-  --surface-color: #ffffff;
+  --background-color: #f8f6f2;
+  --surface-color: #fffef9;
 }
 
 .dark-background {
@@ -146,11 +147,11 @@ h6 {
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
-  background-color: var(--background-color);
+  background: linear-gradient(135deg, #001f3f 0%, #003d7a 50%, #005bb5 100%);
 }
 
 .header .topbar {
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, #003d7a 0%, #005bb5 100%);
   height: 40px;
   padding: 0;
   font-size: 14px;
@@ -198,7 +199,7 @@ h6 {
 }
 
 .header .branding {
-  background-color: var(--background-color);
+  background: transparent;
   min-height: 60px;
   padding: 10px 0;
 }
@@ -216,7 +217,8 @@ h6 {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .scrolled .header {
@@ -279,7 +281,11 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
   }
 
   .navmenu .dropdown ul {
@@ -408,7 +414,11 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
   }
 
   .navmenu .active i,
@@ -520,14 +530,15 @@ h6 {
   font-size: 16px;
   padding: 0 20px;
   margin: -7px -8px -7px 0;
-  background: var(--accent-color);
+  background: var(--accent-gradient);
   color: var(--contrast-color);
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: linear-gradient(45deg, #0056b3, #004085);
+  transform: translateY(-1px);
 }
 
 .footer .footer-top {
@@ -882,7 +893,7 @@ section,
 
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: var(--accent-gradient);
   font-family: var(--heading-font);
   font-weight: 400;
   font-size: 16px;
@@ -891,13 +902,14 @@ section,
   padding: 12px 30px;
   border-radius: 4px;
   transition: 0.5s;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 28px rgba(0, 123, 255, 0.3);
 }
 
 .hero .btn-get-started:hover {
   color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #0056b3, #004085);
+  box-shadow: 0 8px 28px rgba(0, 123, 255, 0.4);
+  transform: translateY(-2px);
 }
 
 .hero .btn-watch-video {
@@ -983,9 +995,20 @@ section,
 }
 
 .featured-services .service-item .icon i {
-  color: var(--accent-color);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 36px;
   transition: ease-in-out 0.3s;
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.15);
 }
 
 .featured-services .service-item h4 {
@@ -1043,7 +1066,7 @@ section,
 
 .about .about-content ul i {
   background: var(--surface-color);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 15px rgba(0, 123, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1052,8 +1075,23 @@ section,
   height: 64px;
   font-size: 24px;
   margin-right: 15px;
-  color: var(--accent-color);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   border-radius: 50px;
+  position: relative;
+}
+
+.about .about-content ul i::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--surface-color);
+  border-radius: 50px;
+  z-index: -1;
+  box-shadow: 0px 6px 15px rgba(0, 123, 255, 0.15);
+  border: 3px solid #ffffff;
 }
 
 .about .about-content ul h4 {
@@ -1110,15 +1148,16 @@ section,
 # Stats Section
 --------------------------------------------------------------*/
 .stats i {
-  background-color: var(--accent-color);
+  background: var(--accent-gradient);
   color: var(--contrast-color);
-  border: 6px solid var(--surface-color);
+  border: 6px solid #ffffff;
   width: 64px;
   height: 64px;
   font-size: 24px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
   justify-content: center;
   position: relative;
   z-index: 1;
@@ -1187,13 +1226,15 @@ section,
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: var(--accent-color);
+  background: var(--accent-gradient);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
   transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  border: 3px solid #ffffff;
 }
 
 .services .service-item .icon i {
@@ -1598,7 +1639,7 @@ section,
 }
 
 .pricing .btn-buy {
-  background: var(--accent-color);
+  background: var(--accent-gradient);
   color: var(--contrast-color);
   display: inline-block;
   padding: 8px 35px 10px 35px;
@@ -1612,7 +1653,8 @@ section,
 }
 
 .pricing .btn-buy:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: linear-gradient(45deg, #0056b3, #004085);
+  transform: translateY(-2px);
 }
 
 .pricing .featured h3 {
@@ -1740,8 +1782,10 @@ section,
 
 .contact .info-item i {
   font-size: 20px;
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   width: 44px;
   height: 44px;
   display: flex;
@@ -1750,6 +1794,17 @@ section,
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
   margin-right: 15px;
+  position: relative;
+  border: 2px solid #ffffff;
+}
+
+.contact .info-item i::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.1));
+  border-radius: 50px;
+  z-index: -1;
 }
 
 .contact .info-item h3 {
@@ -1766,8 +1821,15 @@ section,
 }
 
 .contact .info-item:hover i {
-  background: var(--accent-color);
+  background: var(--accent-gradient);
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: var(--contrast-color);
+  background-clip: initial;
   color: var(--contrast-color);
+}
+
+.contact .info-item:hover i::before {
+  background: var(--accent-gradient);
 }
 
 .contact .php-email-form {
@@ -1809,7 +1871,7 @@ section,
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: var(--accent-gradient);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
