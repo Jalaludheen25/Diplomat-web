@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - BizLand Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS for Cost Calculator Button -->
+  <style>
+    .navmenu .btn-calculator {
+      background: linear-gradient(45deg, #007bff, #0056b3);
+      color: white !important;
+      padding: 12px 24px;
+      border-radius: 25px;
+      margin-left: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    .navmenu .btn-calculator:hover {
+      background: linear-gradient(45deg, #0056b3, #004085);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    }
+
+    @media (max-width: 1199px) {
+      .navmenu .btn-calculator {
+        margin-left: 0;
+        margin-top: 10px;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+
+    /* Dropdown section headers and dividers */
+    .navmenu .dropdown-header {
+      font-weight: bold;
+      color: #666;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 10px 20px 5px 20px;
+      letter-spacing: 1px;
+      pointer-events: none;
+    }
+
+    .navmenu .dropdown-divider {
+      height: 1px;
+      background-color: #e9ecef;
+      margin: 5px 0;
+      pointer-events: none;
+    }
+
+    /* Navbar styling to match the image */
+    .header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .topbar {
+      display: none !important;
+    }
+
+    .branding {
+      padding: 15px 0;
+    }
+
+    .sitename {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin: 0;
+    }
+
+    .navmenu ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navmenu ul li {
+      list-style: none;
+    }
+
+    .navmenu ul li>a {
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 10px 0;
+      transition: color 0.3s ease;
+    }
+
+    .navmenu ul li>a:hover {
+      color: #007bff;
+    }
+
+    /* Corporate Services Section Styling */
+    .corporate-services {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .corporate-services .section-title h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .corporate-services .section-title p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card .icon-wrapper {
+      width: 60px;
+      height: 60px;
+      background: #007bff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .service-card .icon-wrapper i {
+      font-size: 24px;
+      color: white;
+    }
+
+    .service-card h4 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .service-card .read-more {
+      color: #007bff;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .service-card .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .service-card.explore-more {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #f8f9fa;
+      border: 2px dashed #ddd;
+    }
+
+    .service-card.explore-more .icon-wrapper {
+      background: #007bff;
+    }
+
+    .service-card.explore-more h4 {
+      color: #333;
+      font-size: 18px;
+    }
+
+    /* Business Setup Info Section Styling */
+    .business-setup-info {
+      padding: 80px 0;
+      background-color: #f0f0f0;
+    }
+
+    .business-setup-info .section-title h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .business-setup-info .section-title p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      height: 100%;
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .info-card .number {
+      color: #007bff;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .info-card h4 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .cta-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      height: fit-content;
+      position: sticky;
+      top: 20px;
+    }
+
+    .cta-card h3 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .cta-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+      margin-bottom: 30px;
+    }
+
+    .cta-buttons .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    .cta-buttons .btn-primary {
+      background: #007bff;
+      color: white;
+    }
+
+    .cta-buttons .btn-primary:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .cta-buttons .btn-secondary {
+      background: #007bff;
+      color: white;
+    }
+
+    .cta-buttons .btn-secondary:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .or-divider {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin: 15px 0;
+    }
+
+    .expert-image {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .expert-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Virtuzone Way Section Styling */
+    .virtuzone-way {
+      padding: 80px 0;
+      background-color: #1a1a1a;
+      color: white;
+    }
+
+    .virtuzone-way h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+
+    .virtuzone-way .description-text {
+      margin-bottom: 40px;
+    }
+
+    .virtuzone-way .description-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #cccccc;
+      margin-bottom: 20px;
+    }
+
+    .virtuzone-way .highlight-text {
+      margin-bottom: 40px;
+    }
+
+    .virtuzone-way .highlight-text p {
+      font-size: 18px;
+      font-weight: 600;
+      color: #007bff;
+      margin: 0;
+    }
+
+    .virtuzone-way .btn-pricing {
+      background: #007bff;
+      color: white;
+      padding: 15px 40px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .virtuzone-way .btn-pricing:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .virtuzone-way h2 {
+        font-size: 28px;
+      }
+
+      .virtuzone-way .description-text p {
+        font-size: 14px;
+      }
+
+      .virtuzone-way .highlight-text p {
+        font-size: 16px;
+      }
+    }
+
+    /* Setup Options Section Styling */
+    .setup-options {
+      padding: 80px 0;
+      background-color: #f0f0f0;
+    }
+
+    .setup-options .section-title h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .setup-options .section-title p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 50px;
+    }
+
+    .option-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      height: 100%;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .option-card h3 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .benefits-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
+    .benefits-list li {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .benefits-list li:before {
+      content: "•";
+      color: #007bff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+    }
+
+    .option-card .btn-outline {
+      background: transparent;
+      color: #007bff;
+      border: 2px solid #007bff;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .option-card .btn-outline:hover {
+      background: #007bff;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .setup-options .section-title h2 {
+        font-size: 28px;
+      }
+
+      .option-card {
+        margin-bottom: 20px;
+      }
+
+      .option-card h3 {
+        font-size: 24px;
+      }
+
+      .benefits-list li {
+        font-size: 14px;
+      }
+    }
+
+    /* Business Process Section Styling */
+    .business-process {
+      padding: 80px 0;
+      background-color: white;
+      position: relative;
+    }
+
+    .business-process::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      border-radius: 0 0 0 100%;
+      z-index: 1;
+    }
+
+    .business-process .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .business-process .section-title h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .business-process .section-title p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 50px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .process-card {
+      background: #f8f9fa;
+      padding: 30px 25px;
+      border-radius: 10px;
+      height: 100%;
+      position: relative;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .process-card .step-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .process-card h4 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .process-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .business-process::before {
+        width: 100px;
+        height: 100px;
+      }
+
+      .business-process .section-title h2 {
+        font-size: 28px;
+      }
+
+      .process-card {
+        margin-bottom: 20px;
+      }
+
+      .process-card h4 {
+        font-size: 18px;
+      }
+
+      .process-card p {
+        font-size: 13px;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: BizLand
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Virtuzone</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li class="dropdown"><a href="#"><span>Business Setup</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li class="dropdown-header">FREE ZONES</li>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Business Activities</a></li>
+                <li><a href="#">Free Zone License Locations and Pricing</a></li>
+                <li><a href="#">UAE Residence Visa</a></li>
+                <li><a href="#">Registration Process</a></li>
+                <li><a href="#">Our Solution</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">MAINLAND</li>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Sponsorship</a></li>
+                <li><a href="#">Dubai Mainland Licence</a></li>
+                <li><a href="#">Business Activities</a></li>
+                <li><a href="#">Mainland Visas</a></li>
+                <li><a href="#">VirtuFit</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Accounting & Tax</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#about">Accounting Services</a></li>
+                <li><a href="#">VAT & Tax Consultancy</a></li>
+                <li><a href="#">Corporate Tax</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Services</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li class="dropdown-header">OPERATIONAL SERVICES</li>
+                <li><a href="#services">IT Services</a></li>
+                <li><a href="#">Legal Services</a></li>
+                <li><a href="#">Mail Management</a></li>
+                <li><a href="#">Virtual Receptionist</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">SUPPORT SERVICES</li>
+                <li><a href="#">Tourist Visa</a></li>
+                <li><a href="#">Golden Visa UAE</a></li>
+                <li><a href="#">Second Citizenship & Residency</a></li>
+                <li><a href="#">PRO Services</a></li>
+                <li><a href="#">Will Preparation Service</a></li>
+                <li><a href="#">Trademark & Copyright Registration</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Resources</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#">AI Business Plan</a></li>
+                <li><a href="#">Tax AI Chat</a></li>
+                <li><a href="#">Business Setup AI Chat</a></li>
+                <li><a href="#">Setup Guides</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Infographics</a></li>
+                <li><a href="#">Get a Trade Licence</a></li>
+                <li><a href="#">E-commerce Licence</a></li>
+                <li><a href="#">How to Start a Business in Dubai</a></li>
+                <li><a href="#">Our Partners</a></li>
+                <li><a href="#">Stand Together UAE</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#">Support Services</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="calculator/index.html" class="btn-calculator">Cost Calculator</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>Welcome to <span>BizLand</span></h1>
+            <p>We are team of talented designers making websites with Bootstrap</p>
+            <div class="d-flex">
+              <a href="#about" class="btn-get-started">Get Started</a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch
+                  Video</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Corporate Services Section -->
+    <section id="corporate-services" class="corporate-services section">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>Already own a business?</h2>
+          <p>Simplify your operations with our end-to-end suite of corporate services</p>
+        </div>
+
+        <!-- First Row of Cards -->
+        <div class="row gy-4 mb-4">
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-calculator"></i>
+              </div>
+              <h4>Corporate Tax & VAT</h4>
+              <p>Expert advice ensures compliance with Corporate Tax and VAT obligations with the Federal Tax Authority
+                (FTA).</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-bank"></i>
+              </div>
+              <h4>Bank Account Opening</h4>
+              <p>Easily open business or personal bank accounts with the UAE's trusted banks.</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-clipboard-data"></i>
+              </div>
+              <h4>Accounting & Payroll</h4>
+              <p>Our accountants manage finances, providing bookkeeping, reconciliation, payroll, and audit support,
+                saving hiring costs.</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>Compliance Services</h4>
+              <p>Our experts guide you through complex UAE regulatory requirements and UBO filings.</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Row of Cards -->
+        <div class="row gy-4">
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-award"></i>
+              </div>
+              <h4>Golden Visa</h4>
+              <p>Obtain a UAE Golden Visa for long-term residency with a seamless application process.</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-gear"></i>
+              </div>
+              <h4>PRO Services</h4>
+              <p>Delegate admin tasks to our PRO team, focusing on your business while saving time and money.</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="bi bi-scales"></i>
+              </div>
+              <h4>Legal Services</h4>
+              <p>Legal team advises on UAE's laws regarding M&As, corporate restructuring, financing, and dispute
+                resolution.</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="800">
+            <div class="service-card explore-more">
+              <div class="icon-wrapper">
+                <i class="bi bi-arrow-right"></i>
+              </div>
+              <h4>Explore more of our corporate services</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Corporate Services Section -->
+
+    <!-- Business Setup Section -->
+    <section id="business-setup-info" class="business-setup-info section">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>Should you undertake business setup in Dubai yourself?</h2>
+          <p>Wondering if you can start a Dubai company yourself? You can. But there are some things you need to know.
+          </p>
+        </div>
+
+        <div class="row">
+          <!-- Left Column - Numbered Points -->
+          <div class="col-lg-8">
+            <div class="row gy-4">
+              <!-- Point 1 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-card">
+                  <div class="number">1</div>
+                  <h4>There is a multitude of options.</h4>
+                  <p>With over 60 jurisdictions, how do you know which is the right one for your Dubai company? How do
+                    you make sure you're choosing the right licence and business activity? Don't let your business setup
+                    in Dubai be a trial-and-error process.</p>
+                </div>
+              </div>
+
+              <!-- Point 2 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-card">
+                  <div class="number">2</div>
+                  <h4>It is not easy.</h4>
+                  <p>Liaising with the relevant authorities and government departments alone takes time and travel
+                    miles. Lots of both.</p>
+                </div>
+              </div>
+
+              <!-- Point 3 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="info-card">
+                  <div class="number">3</div>
+                  <h4>There is a mountain of paperwork.</h4>
+                  <p>Starting a Dubai company involves tonnes of paperwork. Think forms, applications, banking and legal
+                    requirements – and that's just the start.</p>
+                </div>
+              </div>
+
+              <!-- Point 4 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="info-card">
+                  <div class="number">4</div>
+                  <h4>You might save money – but at what cost?</h4>
+                  <p>What is your time worth? Are you outstanding with detail? Can you afford to hit pause on your
+                    business plans to fill out forms or attend more meetings?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column - CTA -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="cta-card">
+              <h3>But it doesn't have to be this way.</h3>
+              <p>Before you do anything, talk to one of our experts at company formation in Dubai. We'll show you how
+                easy the Virtuzone process is and why we're the partner of choice for more entrepreneurs choosing to
+                start a Dubai company.</p>
+
+              <div class="cta-buttons">
+                <a href="#calculator" class="btn btn-primary">Calculate Now</a>
+                <div class="or-divider">or</div>
+                <a href="#contact" class="btn btn-secondary">Speak to an expert</a>
+              </div>
+
+              <div class="expert-image">
+                <img src="assets/img/expert-consultation.jpg" alt="Expert Consultation" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Business Setup Section -->
+
+    <!-- Virtuzone Way Section -->
+    <section id="virtuzone-way" class="virtuzone-way section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center" data-aos="fade-up">
+            <h2>Business setup in Dubai – the Virtuzone way.</h2>
+
+            <div class="description-text">
+              <p>Our time-tested process saves you time and money, while removing the headaches of beginning your
+                journey. We know the game. We have the networks. We are the leaders in this space.</p>
+
+              <p>Since 2009, our company formation experts have helped more than 80,000 business owners and founders
+                with business setup in Dubai. We've done the heavy lifting and helped them navigate a myriad of options,
+                while they focus on their exciting new Dubai company. Our process saves you time and money, while
+                removing the headaches of beginning your journey. Make sure you get set up the right way!</p>
+            </div>
+
+            <div class="highlight-text" data-aos="fade-up" data-aos-delay="200">
+              <p>Find out why over 80,000 entrepreneurs have entrusted their business with us.</p>
+            </div>
+
+            <div class="cta-button" data-aos="fade-up" data-aos-delay="300">
+              <a href="#pricing" class="btn btn-pricing">Pricing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Virtuzone Way Section -->
+
+    <!-- Setup Options Section -->
+    <section id="setup-options" class="setup-options section">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>What setup option is best for your business?</h2>
+          <p>Business setup in Dubai (or anywhere in the UAE) can be complicated.<br>
+            Decisions need to be made which can affect your journey and shape your success.<br>
+            Jurisdiction? Free zone or mainland?</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Free Zones Column -->
+          <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="option-card">
+              <h3>Free Zones</h3>
+              <ul class="benefits-list">
+                <li>Retain 100% ownership of your Dubai company</li>
+                <li>0% corporate and income tax rate</li>
+                <li>No custom duties</li>
+                <li>Option to repatriate 100% of your capital and profits</li>
+              </ul>
+              <div class="cta-button">
+                <a href="#" class="btn btn-outline">Find your free zone</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mainland Column -->
+          <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="option-card">
+              <h3>Mainland</h3>
+              <ul class="benefits-list">
+                <li>Business activities not limited</li>
+                <li>Operate anywhere inside and outside the country</li>
+                <li>No limit on number of visas</li>
+              </ul>
+              <div class="cta-button">
+                <a href="#" class="btn btn-outline">Mainland Business Setup</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Setup Options Section -->
+
+    <!-- Business Process Section -->
+    <section id="business-process" class="business-process section">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>The process of business setup in Dubai</h2>
+          <p>With Virtuzone as your company formation partner, registering a company in the UAE is not only easy, but
+            it's the most cost-effective way to do it! In fact, the entire process can take as little as 24 hours!
+            That's right! All you have to do is supply us with the relevant information about your company and we do the
+            rest. Here's our time-tested process:</p>
+        </div>
+
+        <div class="row gy-4">
+          <!-- Step 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-card">
+              <div class="step-number">1</div>
+              <h4>Prepare Documentation</h4>
+              <p>If you're an overseas entrepreneur starting up in a new country for the first time, the documentation
+                process can be daunting. We help you to make the right decisions for your Dubai company and handle all
+                of the complex paperwork.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-card">
+              <div class="step-number">2</div>
+              <h4>Business Licence</h4>
+              <p>Choosing the right licence and applying for it are essential to getting your business setup in Dubai
+                right. Having an in-depth understanding of the dos and don'ts around setting up your business licence
+                will help you to avoid the common traps we see people fall into. For instance, some business categories
+                require prior approvals from certain authorities. A company formation expert will guide you through the
+                necessary requirements to start your business.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-card">
+              <div class="step-number">3</div>
+              <h4>Visa Process</h4>
+              <p>Private companies can obtain new employment entry permits for their employees provided they apply for
+                residence visa status within 90 days of the employee's entry into the UAE.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="process-card">
+              <div class="step-number">4</div>
+              <h4>Bank Account</h4>
+              <p>Setting up a corporate bank account in the UAE can be a little arduous for international entrepreneurs.
+                It requires careful consideration and there are several boxes to tick to ensure you have everything in
+                place before approaching your bank of choice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Business Process Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-emoji-smile"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-journal-richtext"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-headset"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-people"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>FAQs</h2>
+        <p>Our team of experts fields common questions from people all over the globe about company formation in the
+          UAE.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>Why choose Dubai for starting a business?</h3>
+                <div class="faq-content">
+                  <p>So many reasons! Here's a list of the most common ones:</p>
+                  <ul>
+                    <li>The UAE government actively promotes businesses as part of its long-term economic stability
+                      plan.</li>
+                    <li>Dubai offers a tax-friendly environment and competitive labor and financing costs.</li>
+                    <li>It has no foreign exchange controls, trade barriers, or quotas.</li>
+                    <li>Dubai is strategically placed for doing business, with easy access to 1.5 billion consumers in
+                      Africa, West Asia, Eastern Europe, and the Middle East.</li>
+                    <li>Our world-class transport links also make it an easy place to attract business to.</li>
+                    <li>In terms of business setup, the process is straightforward and affordable.</li>
+                    <li>Dubai has a large pool of highly educated talent and world-class infrastructure, making it ideal
+                      for startups.</li>
+                    <li>Its high standard of living combined with unparalleled safety measures makes Dubai an alluring
+                      destination for global talent.</li>
+                    <li>Conducting market research in Dubai is simplified due to clear procedures and robust legal
+                      frameworks.</li>
+                  </ul>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How does the economy of Dubai support new businesses?</h3>
+                <div class="faq-content">
+                  <p>Dubai's economy is highly diversified and business-friendly, offering numerous advantages for new
+                    businesses including strategic location, world-class infrastructure, favorable tax policies, and
+                    access to global markets.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What are the steps to set up a business in Dubai?</h3>
+                <div class="faq-content">
+                  <p>The main steps include: 1) Choose your business activity and jurisdiction, 2) Reserve your company
+                    name, 3) Prepare required documentation, 4) Apply for business license, 5) Complete visa processing,
+                    6) Open a corporate bank account. Virtuzone can guide you through each step.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How can I determine the best location for my business in Dubai?</h3>
+                <div class="faq-content">
+                  <p>The best location depends on your business activity, target market, and operational needs. Free
+                    zones offer 100% foreign ownership and tax benefits, while mainland companies can operate anywhere
+                    in the UAE. Our experts can help you choose the optimal jurisdiction.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What are the differences between setting up a mainland business versus a free zone business?</h3>
+                <div class="faq-content">
+                  <p>Free zone businesses offer 100% foreign ownership, 0% corporate tax, and no customs duties, but are
+                    limited in where they can operate. Mainland businesses can operate anywhere in the UAE with
+                    unlimited business activities but may require a local partner depending on the business type.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How can business consultants or business setup consultants assist me?</h3>
+                <div class="faq-content">
+                  <p>Business setup consultants provide expert guidance through the entire company formation process,
+                    helping you choose the right jurisdiction, prepare documentation, navigate legal requirements, and
+                    ensure compliance with UAE regulations. They save you time and help avoid costly mistakes.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How can I open a corporate bank account for my company in Dubai?</h3>
+                <div class="faq-content">
+                  <p>Opening a corporate bank account requires your business license, Emirates ID, passport copies,
+                    business plan, and initial deposit. Different banks have varying requirements and processing times.
+                    Our banking specialists can help you choose the right bank and prepare all necessary documentation.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Are there any share capital requirements for specific business setups?</h3>
+                <div class="faq-content">
+                  <p>Yes, share capital requirements vary by jurisdiction and business type. Free zones typically have
+                    lower minimum capital requirements, while mainland companies may require higher capital depending on
+                    the business activity. Some activities have specific capital requirements set by regulatory
+                    authorities.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What is the process for obtaining employment visas and residence visas for staff?</h3>
+                <div class="faq-content">
+                  <p>The process involves obtaining work permits, medical examinations, Emirates ID applications, and
+                    residence visa stamping. Processing typically takes 2-4 weeks depending on the nationality and
+                    documentation. We handle the entire visa process for your employees.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What is the golden visa, and how does it differ from regular visas?</h3>
+                <div class="faq-content">
+                  <p>The Golden Visa is a long-term residence visa (5-10 years) for investors, entrepreneurs, and
+                    skilled professionals. Unlike regular visas, it offers extended validity, multiple entries, and
+                    doesn't require a sponsor. It's ideal for business owners looking for long-term residency in the
+                    UAE.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What are the visa processing times and associated fees?</h3>
+                <div class="faq-content">
+                  <p>Visa processing typically takes 2-4 weeks for employment visas and 1-2 weeks for investor visas.
+                    Fees vary by visa type, nationality, and processing speed. Express processing is available for
+                    urgent cases. We provide transparent pricing and timeline estimates for all visa services.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How do UAE free zones differ from one another?</h3>
+                <div class="faq-content">
+                  <p>Free zones differ in terms of permitted business activities, location, infrastructure, costs, and
+                    specific benefits. Some specialize in technology, others in trading or manufacturing. Each has
+                    unique advantages like proximity to airports, ports, or specific industry clusters.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What kind of business licenses are available in Dubai?</h3>
+                <div class="faq-content">
+                  <p>Dubai offers three main types of business licenses: Commercial (for trading activities),
+                    Professional (for service-based businesses), and Industrial (for manufacturing). Each license type
+                    has specific activities and requirements. The choice depends on your business nature and objectives.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What are the legal and regulatory requirements for business setup in Dubai?</h3>
+                <div class="faq-content">
+                  <p>Legal requirements include business license approval, trade name registration, initial approvals
+                    from relevant authorities, compliance with labor laws, and adherence to specific industry
+                    regulations. Requirements vary by business type and jurisdiction.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How do the local service agent agreement and local sponsor system work?</h3>
+                <div class="faq-content">
+                  <p>For mainland companies, a local service agent (for most activities) or local sponsor (for certain
+                    activities) is required. The local service agent provides administrative support without ownership
+                    rights, while a local sponsor may have ownership stakes depending on the business activity.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What are the legal structures available for business setup in Dubai, like LLC, joint stock company,
+                  etc.?</h3>
+                <div class="faq-content">
+                  <p>Available structures include Limited Liability Company (LLC), Free Zone Establishment (FZE), Free
+                    Zone Company (FZC), Branch Office, Representative Office, and Public/Private Joint Stock Companies.
+                    Each structure has different ownership, liability, and operational characteristics.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Can foreigners have complete foreign ownership in any business setup?</h3>
+                <div class="faq-content">
+                  <p>Yes, foreigners can have 100% ownership in free zones and in many mainland activities following
+                    recent UAE law changes. Certain strategic sectors may still require local partnership, but the
+                    majority of business activities now allow full foreign ownership.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How are the legal forms and legal documents managed and attested?</h3>
+                <div class="faq-content">
+                  <p>Legal documents require attestation from relevant authorities including notarization, Ministry of
+                    Foreign Affairs attestation, and UAE Embassy attestation in the country of origin. We manage the
+                    entire attestation process to ensure all documents meet UAE legal requirements.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How does license renewal work?</h3>
+                <div class="faq-content">
+                  <p>Business licenses typically require annual renewal with updated documentation, fee payments, and
+                    compliance certificates. The renewal process varies by jurisdiction and license type. We provide
+                    renewal reminders and handle the entire process to ensure continuous business operations.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What are the restrictions on foreign company branches?</h3>
+                <div class="faq-content">
+                  <p>Foreign company branches can only conduct activities related to their parent company's business and
+                    cannot engage in trading activities. They require a local service agent and must maintain specific
+                    capital requirements. Branch offices are suitable for representative or project-based activities.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Do I need a physical office to start a business in Dubai?</h3>
+                <div class="faq-content">
+                  <p>Yes, a physical office address is required for business registration. Options include traditional
+                    offices, shared workspaces, or virtual offices depending on your business needs and jurisdiction
+                    requirements. Free zones often offer flexible office solutions for startups.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How is the digital infrastructure and support from digital government regulatory authority?</h3>
+                <div class="faq-content">
+                  <p>The UAE has world-class digital infrastructure with government services increasingly digitized. The
+                    Digital Government provides online portals for business registration, licensing, and compliance.
+                    This streamlines processes and reduces paperwork for business setup and ongoing operations.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p><span>Need Help?</span> <span class="description-title">Contact Us</span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>info@example.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe">
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">BizLand</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">BizLand</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+          href=“https://themewagon.com>ThemeWagon
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
